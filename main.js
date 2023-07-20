@@ -111,7 +111,7 @@ llantas.push(new LlantasNuevasHyundai(925285, "P", "66cm", "130 km/h", "28", 850
 
 llantas.forEach((llanta) => {
 	llanta.ivallantas();
-	console.log("Precio con iva incluido de las llantas es: " + llanta.ivallantas() + " y su velocidad maxima de punta es de : " + llanta.velocidad)
+	console.log("Precio con iva incluido de las llantas es: " + llanta.ivallantas() + ". Estos precios estan actualizados al " + new ( Date) + " y su velocidad maxima de punta es de : " + llanta.velocidad)
 });
    
  
