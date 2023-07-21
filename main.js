@@ -62,11 +62,10 @@ class Vehiculos {
 }
 const vehiculo1 = new Vehiculos(102421, "Hyundai", "GRAND I10 SD 2015", 3500000, 20, 6, 125000);
 const vehiculo2 = new Vehiculos(465465, "Hyundai", "PALISADE 2011", 2500000, 13, 1, 69000);
-const vehiculo3 = new Vehiculos(1014210, "Hyundai", "TUCSON 2015", 5500000, 20, 2, 12000);
-
-/*PROXIMAMENTE EN LA PAGINA NUEVOS VEHICULOS*/
+const vehiculo3 = new Vehiculos(4569878, "Hyundai", "TUCSON 2015", 5500000, 20, 2, 12000);
 const vehiculo4 = new Vehiculos(1024210, "Hyundai", "CRETA GRAND 2023", 8500000, 10, 9, 80000);
-const vehiculo5 = new Vehiculos(1024210, "Hyundai", "SANTA FE 2019", 700000, 8, 3, 5000);
+const vehiculo5 = new Vehiculos(1562170, "Hyundai", "SANTA FE 2019", 700000, 8, 3, 5000);
+const vehiculo6 = new Vehiculos(9855645, "Hyundai", "BRICK 2022", 5500000, 15, 5, 41000);
 
 
 
@@ -75,12 +74,18 @@ console.log("Precio + iva del vehiculo 2: " + vehiculo2.precioconiva)
 console.log("Kilometraje del vehiculo 3: " + vehiculo3.kilometraje)
 console.log("Años de uso del vehiculo 1: " + vehiculo1.añosDeUso)
 console.log("Marca del vehiculo 3: " + vehiculo3.marca)
+console.log("Marca vehiculo 5: " + vehiculo5.marca + ", modelo : " + vehiculo5.modelo + ", precio (Con iva incluido) : $" 
++ vehiculo5.precioconiva)
 
 console.log("kilometraje" in vehiculo1)
+console.log("añosDeUso" in vehiculo2)
+console.log("stock" in vehiculo5)
+
 
 
 const Seguros = ["Rivadavia", "Sancor S.A", "La Caja", "La Mercantil Andina S.A", "Allianz", "Escudo Seguros"]
 Seguros.push("Federacion Patronal")
+Seguros.push("Parana Seguros")
 
 console.log("El vehiculo 2 esta asegurado con la siguiente compañia: " + Seguros[0] + " .Desea cambiar de compañia?")
 console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguros[6] + " .Desea cambiar de compañia?")
@@ -88,9 +93,10 @@ console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguro
 
 
 class LlantasNuevasHyundai {
-    constructor(id, medidas, rin, velocidad, presion, precio) {
+    constructor(id, modelo, medidas, rin, velocidad, presion, precio) {
 
         this.id = id;
+        this.modelo = modelo
         this.medidas = medidas;
         this.rin = rin;
         this.velocidad = velocidad;
@@ -103,17 +109,23 @@ class LlantasNuevasHyundai {
     }
 }
 const llantas = []
-llantas.push(new LlantasNuevasHyundai(325418, "XL", "61cm", "190 km/h", "28", 100500))
-llantas.push(new LlantasNuevasHyundai(9712354, "LT", "40cm", "220 km/h", "32", 250000))
-llantas.push(new LlantasNuevasHyundai(3854185, "LP", "39cm", "100 km/h", "25", 70000))
-llantas.push(new LlantasNuevasHyundai(54785, "ST", "73cm", "170 km/h", "22", 110000))
-llantas.push(new LlantasNuevasHyundai(925285, "P", "66cm", "130 km/h", "28", 85000))
+llantas.push(new LlantasNuevasHyundai(325418, "SPEEDYG", "XL", "61cm", "190 km/h", "28", 100500))
+llantas.push(new LlantasNuevasHyundai(9712354, "REALTKS", "LT", "40cm", "220 km/h", "32", 250000))
+llantas.push(new LlantasNuevasHyundai(3854185, "BALKS", "LP", "39cm", "100 km/h", "25", 70000))
+llantas.push(new LlantasNuevasHyundai(54785, "SPRING", "ST", "73cm", "170 km/h", "22", 110000))
+llantas.push(new LlantasNuevasHyundai(925285, "BALI", "P", "66cm", "130 km/h", "28", 85000))
 
 llantas.forEach((llanta) => {
-	llanta.ivallantas();
-	console.log("Precio con iva incluido de las llantas es: " + llanta.ivallantas() + ". Estos precios estan actualizados al " + new ( Date) + " y su velocidad maxima de punta es de : " + llanta.velocidad)
+    llanta.ivallantas();
+    console.log("El neumatico " + llanta.modelo + " alcanza una velocidad maxima de punta de : " + llanta.velocidad + 
+    ". Con iva incluido, su precio es de: $" + llanta.ivallantas() + ". Este precio esta actualizado a la fecha de" + new (Date))
 });
-   
- 
+
+let fechaaumento = new Date (2023, 9, 25, 16, 0, 0 )
+let fechaactual = new Date
+let diadeaumento = fechaaumento - fechaactual
+let resultadoendias = Math.round( diadeaumento / 86400000)
+
+console.warn ("Faltan " + resultadoendias + " dias para que aumenten los precios de los vehiculos y de las llantas")
 
 
