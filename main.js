@@ -71,11 +71,11 @@ const lista = [vehiculo1,vehiculo2,vehiculo3,vehiculo4,vehiculo5,vehiculo6]
 
 debugger
 function Filtrado () {
-    let keyword = prompt ("Ingrese el modelo del vehiculo que quiere buscar")
-    const modeloingresado = lista.filter(   (x)=> x.marca.includes(keyword) )
+    let Filterword = prompt ("Ingrese el modelo del vehiculo que quiere buscar")
+    const modeloingresado = lista.filter(   (x)=> x.modelo.toLowerCase().includes( Filterword) )
 
     if (modeloingresado.length > 0) {
-        console.table ("Se encontraron estos resultados:" + modeloingresado)
+        console.table ("Se encontraron estos resultados:",  modeloingresado)
 
     } else {
         alert ("No se encontro ningun vehiculo con dicho modelo, ingrese uno valido")
@@ -143,4 +143,15 @@ let resultadoendias = Math.round( diadeaumento / 86400000)
 
 console.warn ("Faltan " + resultadoendias + " dias para que aumenten los precios de los vehiculos y de las llantas. No esperes mas!")
 
+const agregar = document.getElementById("Agregar")
+const card = document.querySelector('.nuevascards')
 
+agregar.addEventListener('click', () => {
+const nuevoauto = document.createElement ('div')
+nuevoauto.classList.add("nuevascards")
+nuevoauto.innerHTML = 
+
+'<p>El Hyundai Tucson, también llamado Hyundai ix35, es un vehículo utilitario deportivo perteneciente al segmento C producido por el fabricante surcoreano Hyundai desde el año 2004 En la alineación de la marca, el Tucson se ajusta por debajo del Hyundai Santa Fe y por encima del Hyundai Creta. El nombre es el topónimo inglés para la ciudad de Tucson en Arizona. El Tucson es un cinco plazas con carrocería de cinco puertas; tiene motor delantero transversal y tracción delantera o tracción en las cuatro ruedas, en todos los casos sin sistema reductor. Comparte  plataforma con el Kia Sportage. En cuanto a seguridad, ha obtenido una calificación de cinco estrellas en pruebas realizadas por Global NCAP y Euro NCAP, lo que lo convierte en uno de los vehículos más seguros dentro de su segmento. Tiene como principales rivales al Audi Q3, BMW X1, Citroën C5 Aircross, Ford Escape/Kuga, Honda CR-V, Jeep Cherokee, Kia Sportage, Mazda CX-5, Mercedes-Benz Clase GLA, Mitsubishi Outlander, Nissan Qashqai, Opel Grandland X, Peugeot 3008, Range Rover Evoque, Renault Kadjar, SEAT Ateca, Suzuki Vitara, Toyota RAV4, Volkswagen Tiguan, Volvo XC40. Primera generación (2004-2009) Hyundai Tucson Hyundai Tucson de 2009. Datos generales Período 2004-2009 Dimensiones Dimensiones	5000 / 1830 / 1730 / 2700 mm [editar datos en Wikidata] El Tucson de primera generación se puso a la venta en el año 2004. Su chasis monocasco es el mismo del Kia Sportage lanzado en el año 2004 y similar al del Hyundai Elantra de la misma generación. La primera generación del Tucson se presentó al público en el Salón del Automóvil de Fráncfort del año 2004. Su denominación es Tucson ix en Corea del Sur e ix35 en Europa  y América. El modelo se fabrica en Corea del Sur y República Checa. Los dos motores son en un principio un gasolina atmosférico de cuatro cilindros en línea 2.0 de 141 PS (104 kW; 139 CV) @ 6000 , y un Diésel de cuatro cilindros en  línea y 2.0 litros en variantes de 113 CV (83 kW; 111 CV), 150 CV (110 kW; 150 CV) @ 3800 rpm y 140 CV (100 kW; 140 CV) a 4000 rpm. Los modelos con los motores 2.0 CRDi posteriores incluyen turbocompresor de geometría variable. En los EE. UU., el modelo Tucson se ofrece en base GLS, SE línea media, y de primer nivel Limited (anteriormente LX) los niveles de equipamiento para los modelos 2004. A principios de los años 2005 y el año 2006 los modelos fueron ofrecidos como GL / GLS / Limited.</p>'
+agregar.appendChild(nuevoauto)
+
+})
