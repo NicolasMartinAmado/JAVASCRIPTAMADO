@@ -47,6 +47,7 @@ h3{
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 90px;
 }
 .autos img{
     width: 510px;

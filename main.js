@@ -67,6 +67,22 @@ const vehiculo4 = new Vehiculos(1024210, "Hyundai", "CRETA GRAND 2023", 8500000,
 const vehiculo5 = new Vehiculos(1562170, "Hyundai", "SANTA FE 2019", 700000, 8, 3, 5000);
 const vehiculo6 = new Vehiculos(9855645, "Hyundai", "BRICK 2022", 5500000, 15, 5, 41000);
 
+const lista = [vehiculo1,vehiculo2,vehiculo3,vehiculo4,vehiculo5,vehiculo6]
+
+debugger
+function Filtrado () {
+    let keyword = prompt ("Ingrese el modelo del vehiculo que quiere buscar")
+    const modeloingresado = lista.filter(   (x)=> x.marca.includes(keyword) )
+
+    if (modeloingresado.length > 0) {
+        console.table ("Se encontraron estos resultados:" + modeloingresado)
+
+    } else {
+        alert ("No se encontro ningun vehiculo con dicho modelo, ingrese uno valido")
+        Filtrado ()
+    }
+}
+Filtrado ()
 
 
 console.log("Modelo del vehiculo 1: " + vehiculo1.modelo)
@@ -81,14 +97,12 @@ console.log("kilometraje" in vehiculo1)
 console.log("añosDeUso" in vehiculo2)
 console.log("stock" in vehiculo5)
 
-
-
 const Seguros = ["Rivadavia", "Sancor S.A", "La Caja", "La Mercantil Andina S.A", "Allianz", "Escudo Seguros"]
 Seguros.push("Federacion Patronal")
 Seguros.push("Parana Seguros")
 
-console.log("El vehiculo 2 esta asegurado con la siguiente compañia: " + Seguros[0] + " .Desea cambiar de compañia?")
-console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguros[6] + " .Desea cambiar de compañia?")
+console.log("El vehiculo 2 esta asegurado con la siguiente compañia: " + Seguros[0] + ". Desea cambiar de compañia?")
+console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguros[6] + ". Desea cambiar de compañia?")
 
 
 
@@ -115,10 +129,11 @@ llantas.push(new LlantasNuevasHyundai(3854185, "BALKS", "LP", "39cm", "100 km/h"
 llantas.push(new LlantasNuevasHyundai(54785, "SPRING", "ST", "73cm", "170 km/h", "22", 110000))
 llantas.push(new LlantasNuevasHyundai(925285, "BALI", "P", "66cm", "130 km/h", "28", 85000))
 
+
 llantas.forEach((llanta) => {
     llanta.ivallantas();
     console.log("El neumatico " + llanta.modelo + " alcanza una velocidad maxima de punta de : " + llanta.velocidad + 
-    ". Con iva incluido, su precio es de: $" + llanta.ivallantas() + ". Este precio esta actualizado a la fecha de" + new (Date))
+    ". Con iva incluido, su precio es de: $" + llanta.ivallantas() + ". Este precio esta actualizado a la fecha de " + new (Date))
 });
 
 let fechaaumento = new Date (2023, 9, 25, 16, 0, 0 )
@@ -126,6 +141,6 @@ let fechaactual = new Date
 let diadeaumento = fechaaumento - fechaactual
 let resultadoendias = Math.round( diadeaumento / 86400000)
 
-console.warn ("Faltan " + resultadoendias + " dias para que aumenten los precios de los vehiculos y de las llantas")
+console.warn ("Faltan " + resultadoendias + " dias para que aumenten los precios de los vehiculos y de las llantas. No esperes mas!")
 
 
