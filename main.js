@@ -4,7 +4,7 @@ debugger
 function Nombre() {
     nombreingresado = prompt("Ingrese su Nombre Completo")
 
-    if (nombreingresado == "") {
+    if (nombreingresado === "Number") {
         alert("Ingrese un Nombre valido")
         Nombre()
     }
@@ -60,11 +60,11 @@ class Vehiculos {
     }
 
 }
-const vehiculo1 = new Vehiculos(102421, "Hyundai", "GRAND I10 SD 2015", 3500000, 20, 6, 125000);
-const vehiculo2 = new Vehiculos(465465, "Hyundai", "PALISADE 2011", 2500000, 13, 1, 69000);
+const vehiculo1 = new Vehiculos(102421, "Hyundai", "grand I10 SD 2015", 3500000, 20, 6, 125000);
+const vehiculo2 = new Vehiculos(465465, "Hyundai", "palisae 2011", 2500000, 13, 1, 69000);
 const vehiculo3 = new Vehiculos(4569878, "Hyundai", "TUCSON 2015", 5500000, 20, 2, 12000);
 const vehiculo4 = new Vehiculos(1024210, "Hyundai", "CRETA GRAND 2023", 8500000, 10, 9, 80000);
-const vehiculo5 = new Vehiculos(1562170, "Hyundai", "SANTA FE 2019", 700000, 8, 3, 5000);
+const vehiculo5 = new Vehiculos(1562170, "Hyundai", "SANTA FE 2019 RED", 700000, 8, 3, 5000);
 const vehiculo6 = new Vehiculos(9855645, "Hyundai", "BRICK 2022", 5500000, 15, 5, 41000);
 
 const lista = [vehiculo1,vehiculo2,vehiculo3,vehiculo4,vehiculo5,vehiculo6]
@@ -73,6 +73,7 @@ debugger
 function Filtrado () {
     let Filterword = prompt ("Ingrese el modelo del vehiculo que quiere buscar")
     const modeloingresado = lista.filter(   (x)=> x.modelo.toLowerCase().includes( Filterword) )
+
 
     if (modeloingresado.length > 0) {
         console.table ("Se encontraron estos resultados:",  modeloingresado)
@@ -155,3 +156,4 @@ nuevoauto.innerHTML =
 agregar.appendChild(nuevoauto)
 
 })
+
