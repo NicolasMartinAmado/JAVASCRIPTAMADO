@@ -12,6 +12,7 @@ intarjeta = document.getElementById("intarjeta")
 incod = document.getElementById("incod")
 inpais = document.getElementById("inpais")
 indomicilio = document.getElementById("indireccion")
+incantidad = document.getElementById("incantidad")
 
 
 guardardatos.addEventListener("click", function(){
@@ -23,4 +24,16 @@ guardardatos.addEventListener("click", function(){
     sessionStorage.setItem("Codigo de Seguridad de la Tarjeta", incod.value)
     sessionStorage.setItem("Nacionalidad", inpais.value)
     sessionStorage.setItem("Domicilio", indomicilio.value)
+    sessionStorage.setItem("Cantidad de autos", incantidad.value )
 }) 
+
+const ttl = document.querySelector('.h3')
+aceptardatos.addEventListener("click", () => {
+    const info = document.createElement ('section')
+    info.classList.add("h3")
+info.innerHTML = 
+
+`<h3> Felicidades `+ inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s  Hyundai SANTA FE 2019 RED. </h3>
+<p> El precio final seria de  $`+ (incantidad.value * vehiculo5precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
+aceptardatos.appendChild(info)
+})
