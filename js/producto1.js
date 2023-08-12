@@ -1,6 +1,6 @@
-let vehiculo3 = "Hyundai TUCSON 2015"
-let vehiculo3precioconiva = 5500000 * 1.25
-alert("ATENCION!! Estas a punto de comprar el siguiente vehiculo: " + vehiculo3 + " ( $" + vehiculo3precioconiva + " )")
+let vehiculo1 = "Hyundai grand I10 SD 2015 WHITE"
+let vehiculo1precioconiva = 3500000 * 1.25
+alert("ATENCION!! Estas a punto de comprar el siguiente vehiculo: " + vehiculo1 + " ( $" + vehiculo1precioconiva + " )")
 
 const guardardatos = document.getElementById("guardar")
 const aceptardatos = document.getElementById("aceptar")
@@ -30,10 +30,11 @@ guardardatos.addEventListener("click", function () {
 const ttl = document.querySelector('.h3')
 aceptardatos.addEventListener("click", () => {
     const info = document.createElement('section')
-    info.classList.add("h3")
+    info.classList.add("compraaceptada")
     info.innerHTML =
 
-        `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s  Hyundai SANTA FE 2019 RED. </h3>  `
-            `<p> El precio final seria de  $` + (incantidad.value * vehiculo3precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value;
+        `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s  Hyundai grand I10 SD 2015. </h3>
+<p> El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
     aceptardatos.appendChild(info)
+
 })
