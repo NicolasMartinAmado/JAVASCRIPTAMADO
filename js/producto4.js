@@ -1,6 +1,6 @@
 let vehiculo4 = "Hyundai CRETA GRAND 2023"
 let vehiculo4precioconiva = 8500000 * 1.25
-alert("ATENCION!! Estas a punto de comprar el siguiente vehiculo: " + vehiculo4 + " ( $" + vehiculo4precioconiva + " )")
+Swal.fire("ATENCION!! Estas a punto de comprar el siguiente vehiculo: " + vehiculo4 + " ( $" + vehiculo4precioconiva + " )")
 
 const guardardatos = document.getElementById("guardar")
 const aceptardatos = document.getElementById("aceptar")

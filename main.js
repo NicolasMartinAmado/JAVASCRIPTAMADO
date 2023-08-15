@@ -38,6 +38,21 @@ function Nombre() {
 Nombre()
 
 debugger
+async function Email() {
+    const { value: email } = await Swal.fire({
+        title: 'Input email address',
+        input: 'email',
+        inputLabel: 'Your email address',
+        inputPlaceholder: 'Enter your email address'
+      })
+      
+      if (email) {
+        Swal.fire(`Entered email: ${email}`)
+      }
+}
+Email()
+
+debugger
 function ComprarAuto() {
     const PrecioHyundai = 5000000
     const Hyundaiconiva = PrecioHyundai * 1.25
@@ -136,4 +151,6 @@ agregar.addEventListener('click', () => {
     agregar.appendChild(nuevoauto)
 
 })
+
+const opinion = document.getElementsByClassName("opinion")
 
