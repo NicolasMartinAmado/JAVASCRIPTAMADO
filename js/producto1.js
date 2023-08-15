@@ -28,15 +28,19 @@ guardardatos.addEventListener("click", function () {
 })
 
 
-const ttl = document.querySelector('datosdecompra')
+const ttl = document.querySelector('.datosdecompra')
 
-aceptardatos.addEventListener("click", () => {
+aceptardatos.addEventListener("click", (e) => {
     const info = document.createElement('div')
     info.classList.add("datosdecompra")
     info.innerHTML =
 
         `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s  Hyundai grand I10 SD 2015. </h3>
 <p> El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
-    aceptardatos.appendChild(info)
+    ttl.appendChild(info)
 
 })
+
+
+
+
