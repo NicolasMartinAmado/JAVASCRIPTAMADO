@@ -1,11 +1,39 @@
 
+class Vehiculos {
+    constructor(id, marca, modelo, precio, stock, añosDeUso, kilometraje) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = parseFloat(precio);
+        this.stock = stock;
+        this.añosDeUso = añosDeUso;
+        this.kilometraje = kilometraje;
+        this.precioconiva = this.precio * 1.25
+    }
 
+}
+class LlantasNuevasHyundai {
+    constructor(id, modelo, medidas, rin, velocidad, presion, precio) {
+
+        this.id = id;
+        this.modelo = modelo
+        this.medidas = medidas;
+        this.rin = rin;
+        this.velocidad = velocidad;
+        this.presion = presion;
+        this.precio = parseInt(precio);
+
+    }
+    ivallantas() {
+        return this.precio * 1.25
+    }
+}
 debugger
 function Nombre() {
     const nombreingresado = prompt("Ingrese su Nombre Completo")
 
-    nombreingresado == "" || nombreingresado === null ?  alert("Ingrese un nombre") + Nombre() :  
-    alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
+    nombreingresado == "" || nombreingresado === null ? alert("Ingrese un nombre") + Nombre() :
+        alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
 }
 Nombre()
 
@@ -39,19 +67,6 @@ function ComprarAuto() {
 }
 ComprarAuto()
 
-class Vehiculos {
-    constructor(id, marca, modelo, precio, stock, añosDeUso, kilometraje) {
-        this.id = id;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.precio = parseFloat(precio);
-        this.stock = stock;
-        this.añosDeUso = añosDeUso;
-        this.kilometraje = kilometraje;
-        this.precioconiva = this.precio * 1.25
-    }
-
-}
 const vehiculo1 = new Vehiculos(102421, "Hyundai", "grand I10 SD 2015", 3500000, 20, 6, 125000);
 const vehiculo2 = new Vehiculos(465465, "Hyundai", "palisae 2011", 2500000, 13, 1, 69000);
 const vehiculo3 = new Vehiculos(4569878, "Hyundai", "TUCSON 2015", 5500000, 20, 2, 12000);
@@ -88,22 +103,7 @@ Seguros.push("Parana Seguros")
 console.log("El vehiculo 2 esta asegurado con la siguiente compañia: " + Seguros[0] + ". Desea cambiar de compañia?")
 console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguros[6] + ". Desea cambiar de compañia?")
 
-class LlantasNuevasHyundai {
-    constructor(id, modelo, medidas, rin, velocidad, presion, precio) {
 
-        this.id = id;
-        this.modelo = modelo
-        this.medidas = medidas;
-        this.rin = rin;
-        this.velocidad = velocidad;
-        this.presion = presion;
-        this.precio = parseInt(precio);
-
-    }
-    ivallantas() {
-        return this.precio * 1.25
-    }
-}
 const llantas = []
 llantas.push(new LlantasNuevasHyundai(325418, "SPEEDYG", "XL", "61cm", "190 km/h", "28", 100500))
 llantas.push(new LlantasNuevasHyundai(9712354, "REALTKS", "LT", "40cm", "220 km/h", "32", 250000))
