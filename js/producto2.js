@@ -27,6 +27,7 @@ guardardatos.addEventListener("click", function () {
     sessionStorage.setItem("Cantidad de autos", incantidad.value)
 })
 
+let form = document.getElementById("Datos")
 const ttl = document.querySelector('.datosdecompra')
 
 aceptardatos.addEventListener("click", () => {
@@ -35,6 +36,6 @@ aceptardatos.addEventListener("click", () => {
     info.innerHTML =
 
         `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s ` + vehiculo2 + ` . </h3>
-<p> El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
+<p> El precio final seria de  $`+ (incantidad.value * vehiculo2precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
 ttl.appendChild(info)
 })

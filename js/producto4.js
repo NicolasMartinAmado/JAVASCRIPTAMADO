@@ -35,6 +35,6 @@ aceptardatos.addEventListener("click", () => {
     info.innerHTML =
 
         `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s ` + vehiculo4 + ` . </h3>
-<p> El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
+<p> El precio final seria de  $`+ (incantidad.value * vehiculo4precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
 ttl.appendChild(info)
 })
