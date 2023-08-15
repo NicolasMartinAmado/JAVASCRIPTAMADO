@@ -27,10 +27,12 @@ guardardatos.addEventListener("click", function () {
     sessionStorage.setItem("Cantidad de autos", incantidad.value)
 })
 
-const ttl = document.querySelector('.h3')
+
+const ttl = document.querySelector('datosdecompra')
+
 aceptardatos.addEventListener("click", () => {
-    const info = document.createElement('section')
-    info.classList.add("compraaceptada")
+    const info = document.createElement('div')
+    info.classList.add("datosdecompra")
     info.innerHTML =
 
         `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s  Hyundai grand I10 SD 2015. </h3>

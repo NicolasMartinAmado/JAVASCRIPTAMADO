@@ -163,3 +163,17 @@ footer {
     }
 
 }
+.datosdecompra {
+    & h3 {
+        text-align: center;
+        color: black;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    & p {
+        text-align: center;
+        color: black;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}

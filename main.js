@@ -4,16 +4,9 @@ debugger
 function Nombre() {
     const nombreingresado = prompt("Ingrese su Nombre Completo")
 
-    if (nombreingresado == "" || nombreingresado === null) {
-        alert("Ingrese un nombre")
-        Nombre()
-    }
-    else {
-        alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
-
-    }
+    nombreingresado == "" || nombreingresado === null ?  alert("Ingrese un nombre") + Nombre() :  
+    alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
 }
-
 Nombre()
 
 debugger
@@ -29,16 +22,15 @@ function ComprarAuto() {
     }
     else if (dineroofrecido == Hyundaiconiva) {
         alert("Usted oferto: " + dineroofrecido + "$ . Acepto la oferta, por ese dinero tambien le ofrezco alguno de estos tres vehiculos modelos 2021")
-        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019                                                Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
+        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019. Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
         )
     }
     else if (dineroofrecido > Hyundaiconiva) {
         cambio = parseFloat(dineroofrecido - Hyundaiconiva)
         alert("Compra exitosa, aqui tiene su vuelto: $ " + cambio)
-        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019                                                Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
+        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019. Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
         )
     }
-
     else {
         alert("Ingrese una oferta valida")
         ComprarAuto()
@@ -68,21 +60,14 @@ const vehiculo5 = new Vehiculos(1562170, "Hyundai", "SANTA FE 2019 RED", 700000,
 const vehiculo6 = new Vehiculos(9855645, "Hyundai", "BRICK 2022", 5500000, 15, 5, 41000);
 
 const lista = [vehiculo1, vehiculo2, vehiculo3, vehiculo4, vehiculo5, vehiculo6]
+json = JSON.stringify(lista)
+console.table(json)
 
 debugger
 function Filtrado() {
     let Filterword = prompt("Ingrese el modelo del vehiculo que quiere buscar")
     const modeloingresado = lista.filter((x) => x.modelo.toLowerCase().includes(Filterword))
-
-
-    if (modeloingresado.length > 0) {
-        console.table("Se encontraron estos resultados:", modeloingresado)
-
-    }
-    else {
-        alert("No se encontro ningun vehiculo con dicho modelo, ingrese uno valido")
-        Filtrado()
-    }
+    modeloingresado.length > 0 ? console.table("Se encontraron estos resultados:", modeloingresado) : alert("No se encontro ningun vehiculo con dicho modelo, ingrese uno valido") + Filtrado()
 }
 Filtrado()
 
@@ -91,9 +76,7 @@ console.log("Precio + iva del vehiculo 2: " + vehiculo2.precioconiva)
 console.log("Kilometraje del vehiculo 3: " + vehiculo3.kilometraje)
 console.log("Años de uso del vehiculo 1: " + vehiculo1.añosDeUso)
 console.log("Marca del vehiculo 3: " + vehiculo3.marca)
-console.log("Marca vehiculo 5: " + vehiculo5.marca + ", modelo : " + vehiculo5.modelo + ", precio (Con iva incluido) : $"
-    + vehiculo5.precioconiva)
-
+console.log("Marca vehiculo 5: " + vehiculo5.marca + ", modelo : " + vehiculo5.modelo + ", precio (Con iva incluido) : $" + vehiculo5.precioconiva)
 console.log("kilometraje" in vehiculo1)
 console.log("añosDeUso" in vehiculo2)
 console.log("stock" in vehiculo5)
