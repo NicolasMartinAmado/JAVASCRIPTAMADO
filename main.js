@@ -38,6 +38,7 @@ function Nombre() {
 Nombre()
 
 debugger
+
 async function Email() {
     const { value: email } = await Swal.fire({
         title: 'Input email address',
@@ -142,6 +143,21 @@ console.warn("Faltan " + resultadoendias + " dias para que aumenten los precios 
 const agregar = document.getElementById("Agregar")
 const card = document.querySelector('.nuevascards')
 
+const op = document.getElementById("opinion")
+
+op.addEventListener(`click`, async () => {
+    const { value: text } = await Swal.fire({
+        input: 'textarea',
+        inputLabel: 'Message',
+        inputPlaceholder: 'Type your message here...',
+        inputAttributes: {
+          'aria-label': 'Type your message here'
+        },
+        showCancelButton: true
+      })
+      
+})
+
 agregar.addEventListener('click', () => {
     const nuevoauto = document.createElement('div')
     nuevoauto.classList.add("nuevascards")
@@ -152,5 +168,5 @@ agregar.addEventListener('click', () => {
 
 })
 
-const opinion = document.getElementsByClassName("opinion")
+
 

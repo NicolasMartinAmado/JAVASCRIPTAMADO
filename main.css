@@ -162,6 +162,26 @@ footer {
         height: 500px;
     }
 }
+#opinion{
+    
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    justify-content: flex-end;
+    
+    & .caja{
+        font-size: 25px;
+        font-weight: bolder;
+        color: brown;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+}
 
 .datosdecompra {
     background-color: rgb(255, 255, 255);
