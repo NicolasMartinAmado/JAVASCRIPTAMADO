@@ -31,15 +31,15 @@ let form = document.getElementById("Datos")
 const ttl = document.querySelector('.datosdecompra')
 
 aceptardatos.addEventListener("click", () => {
-    const info = document.createElement('div')
-    info.classList.add("datosdecompra")
-    info.innerHTML =
-
-        `<h3> Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s` + vehiculo1 + ` . </h3>
-<p> El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) + `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value
-ttl.appendChild(info)
+      Swal.fire({
+        icon: 'success',
+        title: `Felicidades `  + inombre.value + ` usted adquirio `  + incantidad.value + ` vehiculo/s `
+        + vehiculo1 + `. El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) +
+         `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value,
+       
+        footer: '<a href="../index.html">Toque aqui para volver al inicio</a>'
+      })
 })
-
 
 
 
