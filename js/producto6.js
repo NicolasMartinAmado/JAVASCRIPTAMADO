@@ -29,13 +29,18 @@ guardardatos.addEventListener("click", function () {
 
 const ttl = document.querySelector('.datosdecompra')
 
-aceptardatos.addEventListener("click", () => {
-    Swal.fire({
-        icon: 'success',
-        title: `Felicidades `  + inombre.value + ` usted adquirio `  + incantidad.value + ` vehiculo/s `
-        + vehiculo6 + `. El precio final seria de  $`+ (incantidad.value * vehiculo6precioconiva) +
-         `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value,
-       
-        footer: '<a href="../index.html">Toque aqui para volver al inicio</a>'
-      })
-})
+aceptardatos.addEventListener("click", (e) => {
+    e.preventDefault()  
+    if (inmail.value.length == 0 || inombre.value.length == 0 || indni.value.length == 0 || inpais.value.length == 0 || indomicilio.value.length == 0 || incod.value.length == 0 || 
+      intarjeta.value.length == 0 || incantidad.value.length == 0){
+      alert("Porfavor COMPLETE LOS DATOS")
+  }else {
+      Swal.fire({
+          icon: 'success',
+          title: `Felicidades `  + inombre.value + ` usted adquirio `  + incantidad.value + ` vehiculo/s `
+          + vehiculo6 + `. El precio final seria de  $`+ (incantidad.value * vehiculo6precioconiva) +
+           `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value,
+         
+          footer: '<a href="../index.html">Toque aqui para volver al inicio</a>'
+        })}
+  })

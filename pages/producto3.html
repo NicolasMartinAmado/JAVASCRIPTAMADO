@@ -13,21 +13,22 @@
 <body>
     <h1>Completa los datos para finalizar la compra</h1>
 
-    <section class="Datos">
+    <form class="Datos"  method="post">
 
-        <input id="inombre" type="text" name="nombre" size="40px" placeholder="Ingrese su nombre completo">
-        <input id="indni" type="number" name="DNI" size="20px" placeholder="Ingrese su DNI O CUIL">
+        <input id="inombre" type="text" name="nombre" size="40px" placeholder="Ingrese su nombre completo" required>
+        <input id="indni" type="number" name="DNI" size="20px" placeholder="Ingrese su DNI O CUIL" required>
         <input id="inmail" type="text" name="mail" size="40px" placeholder="Ingrese su E-mail">
         <input id="incantidad" type="number" name="STOCK" size="20px"
-            placeholder="Ingrese la cantidad de vehiculos que quiere comprar">
+            placeholder="Ingrese la cantidad de vehiculos que quiere comprar" required>
         <div class="tj">
-            <input id="intarjeta" type="number" name="tarjeta" size="60px" placeholder="Numeros de su tarjeta">
-            <input id="incod" type="number" name="COD" size="40px" placeholder="Codigo de seguridad">
+            <input id="intarjeta" type="number" name="tarjeta" size="60px" placeholder="Numeros de su tarjeta" required>
+            <input id="incod" type="number" name="COD" size="40px" placeholder="Codigo de seguridad" required>
         </div>
-        <input id="inpais" type="text" name="pais" size="40px" placeholder="Ingrese su Nacionalidad">
+        <input id="inpais" type="text" name="pais" size="40px" placeholder="Ingrese su Nacionalidad" required>
         <input id="indireccion" type="text" name="direccion" size="40px"
-            placeholder="Ingrese la direccion de su domicilio">
-    </section>
+            placeholder="Ingrese la direccion de su domicilio" required>
+            
+        </form>
 
     <div class="btn">
         <button id="guardar">Guardar Datos</button>
