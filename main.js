@@ -28,6 +28,7 @@ class LlantasNuevasHyundai {
         return this.precio * 1.25
     }
 }
+/**
 debugger
 function Nombre() {
     const nombreingresado = prompt("Ingrese su Nombre Completo")
@@ -36,9 +37,9 @@ function Nombre() {
         alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
 }
 Nombre()
+*/
 
 debugger
-
 async function Email() {
     const { value: email } = await Swal.fire({
         title: 'Input email address',
@@ -53,7 +54,7 @@ async function Email() {
 }
 Email()
 
-debugger
+/** 
 function ComprarAuto() {
     const PrecioHyundai = 5000000
     const Hyundaiconiva = PrecioHyundai * 1.25
@@ -82,6 +83,7 @@ function ComprarAuto() {
 
 }
 ComprarAuto()
+*/
 
 const vehiculo1 = new Vehiculos(102421, "Hyundai", "grand I10 SD 2015", 3500000, 20, 6, 125000);
 const vehiculo2 = new Vehiculos(465465, "Hyundai", "palisae 2011", 2500000, 13, 1, 69000);
@@ -94,13 +96,15 @@ const lista = [vehiculo1, vehiculo2, vehiculo3, vehiculo4, vehiculo5, vehiculo6]
 json = JSON.stringify(lista)
 console.table(json)
 
+/** 
 debugger
 function Filtrado() {
-    let Filterword = prompt("Ingrese el modelo del vehiculo que quiere buscar")
+    let Filterword = Swal.fire("Ingrese el modelo del vehiculo que quiere buscar")
     const modeloingresado = lista.filter((x) => x.modelo.toLowerCase().includes(Filterword))
     modeloingresado.length > 0 ? console.table("Se encontraron estos resultados:", modeloingresado) : alert("No se encontro ningun vehiculo con dicho modelo, ingrese uno valido") + Filtrado()
 }
 Filtrado()
+*/
 
 console.log("Modelo del vehiculo 1: " + vehiculo1.modelo)
 console.log("Precio + iva del vehiculo 2: " + vehiculo2.precioconiva)

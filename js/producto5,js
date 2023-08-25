@@ -33,7 +33,9 @@ aceptardatos.addEventListener("click", (e) => {
     e.preventDefault()  
     if (inmail.value.length == 0 || inombre.value.length == 0 || indni.value.length == 0 || inpais.value.length == 0 || indomicilio.value.length == 0 || incod.value.length == 0 || 
       intarjeta.value.length == 0 || incantidad.value.length == 0){
-      alert("Porfavor COMPLETE LOS DATOS")
+        Swal.fire({ 
+            icon: `error` ,
+            title: "Porfavor COMPLETE LOS DATOS"})
   }else {
       Swal.fire({
           icon: 'success',
