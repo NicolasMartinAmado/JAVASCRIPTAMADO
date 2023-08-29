@@ -164,21 +164,17 @@ footer {
 }
 #opinion{
     
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    display: flex;
-    justify-content: flex-end;
+    padding: 0;
+       margin: 0;
+  
     
     & .caja{
         font-size: 25px;
         font-weight: bolder;
         color: brown;
-        align-items: center;
-        align-self: center;
-        align-content: center;
-        display: flex;
-        justify-content: center;
+       padding: 0;
+       margin: 0;
+      
       
     }
 }
@@ -200,4 +196,18 @@ footer {
         font-weight: bolder;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+}
+#showproductos{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+  
+    background-color: black;
+    & p{
+        color: white;
+        font-weight: 800;
+        text-align: center;
+    }
+ 
 }
