@@ -14,38 +14,39 @@ inpais = document.getElementById("inpais")
 indomicilio = document.getElementById("indireccion")
 incantidad = document.getElementById("incantidad")
 
-
 guardardatos.addEventListener("click", function () {
 
-    sessionStorage.setItem("Nombre Completo", inombre.value)
-    sessionStorage.setItem("DNI", indni.value)
-    sessionStorage.setItem("E-mail", inmail.value)
-    sessionStorage.setItem("Datos de la Tarjeta", intarjeta.value)
-    sessionStorage.setItem("Codigo de Seguridad de la Tarjeta", incod.value)
-    sessionStorage.setItem("Nacionalidad", inpais.value)
-    sessionStorage.setItem("Domicilio", indomicilio.value)
-    sessionStorage.setItem("Cantidad de autos", incantidad.value)
+  sessionStorage.setItem("Nombre Completo", inombre.value)
+  sessionStorage.setItem("DNI", indni.value)
+  sessionStorage.setItem("E-mail", inmail.value)
+  sessionStorage.setItem("Datos de la Tarjeta", intarjeta.value)
+  sessionStorage.setItem("Codigo de Seguridad de la Tarjeta", incod.value)
+  sessionStorage.setItem("Nacionalidad", inpais.value)
+  sessionStorage.setItem("Domicilio", indomicilio.value)
+  sessionStorage.setItem("Cantidad de autos", incantidad.value)
 })
 
 let form = document.getElementById("Datos")
 const ttl = document.querySelector('.datosdecompra')
 
 aceptardatos.addEventListener("click", (e) => {
-  e.preventDefault()  
-  if (inmail.value.length == 0 || inombre.value.length == 0 || indni.value.length == 0 || inpais.value.length == 0 || indomicilio.value.length == 0 || incod.value.length == 0 || 
-    intarjeta.value.length == 0 || incantidad.value.length == 0){
-    Swal.fire({ 
-      icon: `error` ,
-      title: "Porfavor COMPLETE LOS DATOS"})
-}else {
+  e.preventDefault()
+  if (inmail.value.length == 0 || inombre.value.length == 0 || indni.value.length == 0 || inpais.value.length == 0 || indomicilio.value.length == 0 || incod.value.length == 0 ||
+    intarjeta.value.length == 0 || incantidad.value.length == 0) {
     Swal.fire({
-        icon: 'success',
-        title: `Felicidades `  + inombre.value + ` usted adquirio `  + incantidad.value + ` vehiculo/s `
-        + vehiculo1 + `. El precio final seria de  $`+ (incantidad.value * vehiculo1precioconiva) +
-         `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value,
-       
-        footer: '<a href="../index.html">Toque aqui para volver al inicio</a>'
-      })}
+      icon: `error`,
+      title: "Porfavor COMPLETE LOS DATOS"
+    })
+  } else {
+    Swal.fire({
+      icon: 'success',
+      title: `Felicidades ` + inombre.value + ` usted adquirio ` + incantidad.value + ` vehiculo/s `
+        + vehiculo1 + `. El precio final seria de  $` + (incantidad.value * vehiculo1precioconiva) +
+        `.  Proximamente le estaremos enviando el comprobante de compra a este mail: ` + inmail.value,
+
+      footer: '<a href="../index.html">Toque aqui para volver al inicio</a>'
+    })
+  }
 })
 
 

@@ -159,11 +159,12 @@ op.addEventListener(`click`, async () => {
         },
         showCancelButton: true,
     })
-    if(text == 0 || text === undefined){
-        Swal.fire({ 
-            icon: `error` ,
-            title: "NO PUEDE ENVIAR UNA OPINION VACIA"})
-    } else{Swal.fire(`Opinion enviada : ${text}` )} 
+    if (text == 0 || text === undefined) {
+        Swal.fire({
+            icon: `error`,
+            title: "NO PUEDE ENVIAR UNA OPINION VACIA"
+        })
+    } else { Swal.fire(`Opinion enviada : ${text}`) }
 })
 
 agregar.addEventListener('click', () => {
@@ -188,8 +189,7 @@ fetch("productos.json")
             autosjson.textContent = `Modelo del vehiculo: ` + c.Modelo + `/ Id del vehiculo: ` + c.Id + `/ Precio del Vehiculo : $ ` + c.Precio + ` / Stock disponible: ` + c.Stock
             productosjson.appendChild(autosjson)
         })
-        .catch(Swal.fire("ERROR"))
+            .catch(Swal.fire("ERROR"))
     }
-    
+
     )
-    
