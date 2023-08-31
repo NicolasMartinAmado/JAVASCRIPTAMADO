@@ -28,18 +28,7 @@ class LlantasNuevasHyundai {
         return this.precio * 1.25
     }
 }
-/**
-debugger
-function Nombre() {
-    const nombreingresado = prompt("Ingrese su Nombre Completo")
 
-    nombreingresado == "" || nombreingresado === null ? alert("Ingrese un nombre") + Nombre() :
-        alert("Bienvenido " + nombreingresado + ". A continuacion entraras en una negociacion con nuestros consecionarios por el Hyundai VLV 2.0")
-}
-Nombre()
-*/
-
-debugger
 async function Email() {
     const { value: email } = await Swal.fire({
         title: 'Input email address',
@@ -54,37 +43,6 @@ async function Email() {
 }
 Email()
 
-/** 
-function ComprarAuto() {
-    const PrecioHyundai = 5000000
-    const Hyundaiconiva = PrecioHyundai * 1.25
-    alert("!!AVISO¡¡ El precio final del Hyundai se grava por la aplicacion del IVA, por lo tanto su precio final seria :$ " + Hyundaiconiva + ". Dicho precio sera la base de la negociacion, para facilitar la negociacion le recomendamos ofertar mas de lo establecido ya que nuestros dueños son ratones")
-    dineroofrecido = parseFloat(prompt("Cual es el dinero que tiene pensado ofertar por el Hyundai VLV 2.0?"))
-
-    if (dineroofrecido < Hyundaiconiva) {
-        alert("Usted oferto: " + dineroofrecido + "$ . No es el precio que estamos buscando para la venta del vehiculo, pruebe con otra oferta")
-        ComprarAuto()
-    }
-    else if (dineroofrecido == Hyundaiconiva) {
-        alert("Usted oferto: " + dineroofrecido + "$ . Acepto la oferta, por ese dinero tambien le ofrezco alguno de estos tres vehiculos modelos 2021")
-        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019. Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
-        )
-    }
-    else if (dineroofrecido > Hyundaiconiva) {
-        cambio = parseFloat(dineroofrecido - Hyundaiconiva)
-        alert("Compra exitosa, aqui tiene su vuelto: $ " + cambio)
-        alert("Detelles de la compra:  Precio: $" + Hyundaiconiva + ". Kilometraje : 30.200km.  Modelo del vehiculo: VOLVEN 2019. Los dejamos en el inicio de nuestra pagina para que puedan seguir viendo las ofertas que tenemos sobre otros vehiculos "
-        )
-    }
-    else {
-        alert("Ingrese una oferta valida")
-        ComprarAuto()
-    }
-
-}
-ComprarAuto()
-*/
-
 const vehiculo1 = new Vehiculos(102421, "Hyundai", "grand I10 SD 2015", 3500000, 20, 6, 125000);
 const vehiculo2 = new Vehiculos(465465, "Hyundai", "palisae 2011", 2500000, 13, 1, 69000);
 const vehiculo3 = new Vehiculos(4569878, "Hyundai", "TUCSON 2015", 5500000, 20, 2, 12000);
@@ -97,7 +55,6 @@ json = JSON.stringify(lista)
 console.table(json)
 
 /** 
-debugger
 function Filtrado() {
     let Filterword = Swal.fire("Ingrese el modelo del vehiculo que quiere buscar")
     const modeloingresado = lista.filter((x) => x.modelo.toLowerCase().includes(Filterword))
@@ -123,7 +80,6 @@ Seguros.push("Parana Seguros")
 console.log("El vehiculo 2 esta asegurado con la siguiente compañia: " + Seguros[0] + ". Desea cambiar de compañia?")
 console.log("El vehiculo 1 esta asegurado con la siguiente compañia: " + Seguros[6] + ". Desea cambiar de compañia?")
 
-
 const llantas = []
 llantas.push(new LlantasNuevasHyundai(325418, "SPEEDYG", "XL", "61cm", "190 km/h", "28", 100500))
 llantas.push(new LlantasNuevasHyundai(9712354, "REALTKS", "LT", "40cm", "220 km/h", "32", 250000))
@@ -146,7 +102,6 @@ console.warn("Faltan " + resultadoendias + " dias para que aumenten los precios 
 
 const agregar = document.getElementById("Agregar")
 const card = document.querySelector('.nuevascards')
-
 const op = document.getElementById("opinion")
 
 op.addEventListener(`click`, async () => {
@@ -156,8 +111,7 @@ op.addEventListener(`click`, async () => {
         inputPlaceholder: 'Type your message here...',
         inputAttributes: {
             'aria-label': 'Type your message here'
-        },
-        showCancelButton: true,
+        }
     })
     if (text == 0 || text === undefined) {
         Swal.fire({
