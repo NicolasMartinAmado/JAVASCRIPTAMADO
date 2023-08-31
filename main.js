@@ -157,8 +157,13 @@ op.addEventListener(`click`, async () => {
         inputAttributes: {
             'aria-label': 'Type your message here'
         },
-        showCancelButton: true
+        showCancelButton: true,
     })
+    if(text == 0 || text === undefined){
+        Swal.fire({ 
+            icon: `error` ,
+            title: "NO PUEDE ENVIAR UNA OPINION VACIA"})
+    } else{Swal.fire(`Opinion enviada : ${text}` )} 
 })
 
 agregar.addEventListener('click', () => {
